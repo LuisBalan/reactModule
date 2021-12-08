@@ -6,41 +6,7 @@ const operators = ['suma',
                     'division',
                     'potencia'
                 ]
-
-
-// function operationResult({firstNumber, secondNumber, operator}){
-//     let content
-//     if(Number.isNaN(firstNumber) || Number.isNaN(secondNumber)){
-//         content = 'Uno o mas valores no son numeros'
-
-//     }else if(!operators.includes(operator)){
-//         content = 'Se ha ingresado un operador no valido'
-//     }else{
-
-//         switch(operator){
-//             case 'suma':
-//                 content = firstNumber + secondNumber
-//                 break
-//             case 'resta':
-//                 content = firstNumber - secondNumber
-//                 break
-//             case 'multiplicacion':
-//                 content = firstNumber*secondNumber
-//                 break
-//             case 'division':
-//                 content = firstNumber/secondNumber
-//                 break
-//             case "potenciacion":
-//                 content = firstNumber**secondNumber
-//                 break
-//             default:
-//             content = "operador no valido";
-//         }
-//     }
-
-//     return content
-
-// }
+  
 
 
 function Calculator({firstNumber, secondNumber, operator}){
@@ -70,7 +36,7 @@ function Calculator({firstNumber, secondNumber, operator}){
                 content = firstNumber**secondNumber
                 break
             default:
-                //  content = "operador no valido";
+
         }
     }
 
@@ -79,11 +45,5 @@ function Calculator({firstNumber, secondNumber, operator}){
         </div>)
 
 }
-
-// const Calculator = ({firstNumber, secondNumber, operator}) => {
-//     return <div>
-//             <h1>{operationResult(firstNumber, secondNumber, operator)}</h1>
-//          </div>
-// }
 
 export default Calculator;

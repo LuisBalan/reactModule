@@ -25,7 +25,7 @@ function App() {
         </a>
         <Greeting />
         <FullName firstName = "luis" lastName = "balan" /> 
-        <Calculator firstNumber = {1} secondNumber = {1} operator = "potencia" />
+        <Calculator firstNumber = {0} secondNumber = {1} operator = "potencia" />
       </header>
     </div>
   );
