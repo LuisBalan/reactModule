@@ -23,9 +23,9 @@ function App() {
         >
           Learn React Hello
         </a>
-      <Greeting />
-      <FullName firstName = "luis" lastName = "balan" />
-      <Calculator firstNumber = {1} secondNumber = {2} operator = "suma" />
+        <Greeting />
+        <FullName firstName = "luis" lastName = "balan" /> 
+        <Calculator firstNumber = {1} secondNumber = {1} operator = "potencia" />
       </header>
     </div>
   );
