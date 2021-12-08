@@ -30,7 +30,7 @@ const opResult = ({firstNumber, secondNumber, operator}) => {
             case 'division':
                 content = firstNumber/secondNumber
                 break
-            case 'potenciacion':
+            case "potenciacion":
                 content = firstNumber**secondNumber
                 break
         }
