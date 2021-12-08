@@ -1,6 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 
+//Components
+
+import Greeting from './components/Greeting';
+import FullName from './components/FullName';
+import Calculator from './components/Calculator';
+
 function App() {
   return (
     <div className="App">
@@ -15,8 +21,11 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React Hello
         </a>
+      <Greeting />
+      <FullName firstName = "luis" lastName = "balan" />
+      <Calculator firstNumber = {1} secondNumber = {2} operator = "suma" />
       </header>
     </div>
   );
