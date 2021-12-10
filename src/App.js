@@ -5,7 +5,8 @@ import './App.css';
 
 import Greeting from './components/Greeting';
 import FullName from './components/FullName';
-import Calculator from './components/Calculator';
+import Calculator from './components/Counter';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Greeting />
       <FullName firstName = "luis" lastName = "balan" />
       <Calculator firstNumber = {1} secondNumber = {2} operator = "suma" />
+      <NavBar />
       </header>
     </div>
   );
