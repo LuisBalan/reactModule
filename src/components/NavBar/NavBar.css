@@ -14,3 +14,20 @@ li:hover {
 .li-active {
 	color: rgb(26, 87, 200);
 }
+
+.activeClass{
+    color: #61dafb;
+}
+.nonActiveClass{
+    color: none;
+    display: none;
+    
+}
+
+.contentContainer{
+    color: #282c34;
+    font-weight: bolder;
+    min-width: 300px;
+    padding: 50px 0 50px 0;
+    background-color: #61dafb ;
+}
