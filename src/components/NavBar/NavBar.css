@@ -2,15 +2,25 @@
     list-style: none;
 }
 
+.itemsContainer{
+    align-items: center;
+    display: flex;
+}
+
+li{
+    color: #61dafb;
+    background-color: #282C34;
+    margin: 10px;
+    padding: 3px;
+    font-size: xx-large;
+    font-weight: bold;
+
+}
+
 .clickOn{
-    color: white;
-    background-color: greenyellow;
+    color: #282c43;
+    background-color: #61dafb;
     margin: 10px;
+    padding: 3px;
+    border-radius: 5px;
 }
-
-.clickOff{
-    color: white ;
-    background-color: red;
-    margin: 10px;
-}
-
