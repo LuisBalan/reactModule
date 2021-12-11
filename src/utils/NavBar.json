@@ -1,0 +1,28 @@
+{
+    "Guitars": [
+        "Electric",
+        "Acoustic",
+        "Electroacoustic"
+    ],
+    "Bass":[
+        "Electric",
+        "Acoustic",
+        "Electroacoustic"
+    ],
+    "Keyboards":[
+        "Digital",
+        "Acoustic",
+        "Synthesizers"
+    ],
+    "Drums":[
+        "Drums",
+        "Cymbals",
+        "Accesories"
+    ],
+    "Studio":[
+        "Audio Interfaces",
+        "Monitors",
+        "Microphones"
+    ]
+
+}
