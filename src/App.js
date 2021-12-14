@@ -1,95 +1,65 @@
-import logo from './logo.svg';
-import './App.css';
-import { useEffect, useState } from 'react';
+import logo from "./logo.svg";
+import "./App.css";
+import { useEffect, useState } from "react";
+import CharacterCard from "./components/RickAndMortyCard";
 
-// const fs = require('fs')
-// const ENCODING = 'utf-8'
-// const PATH_FILE = './utils/NavBar.json';
-
-import data from './utils/NavBar.json'
-
-//Components
-
-// import Greeting from './components/Greeting';
-// import FullName from './components/FullName';
-// import Calculator from './components/Calculator';
-// import NavBar from './components/NavBar';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React Hello
-//         </a>
-//       <Greeting />
-//       <FullName firstName = "luis" lastName = "balan" />
-//       <Calculator firstNumber = {1} secondNumber = {2} operator = "suma" />
-//       <NavBar />
-//       </header>
-//     </div>
-//   );
-// }
+// Components
+// import NavBar from "./components/NavBar";
+// import UserName from "./components/UserName";
+// import RickAndMortyCard from './components/RickAndMortyCard';
 
 function App() {
-  const [content, setContent] = useState([]);
+	const [characters, setCharacters] = useState([]);
 
-  console.log(data)
-  const NavBarElements = Object.entries(data)
-  console.log(NavBarElements)
+	useEffect(() => {
+		// await fetch()
+		// const getUsers = async () => {
+		// 	const response = await fetch('users.json')
+		// 	console.table(response)
+		// 	const data = await response.json();
+		// 	console.log(data)
+		// 	setUsers(data)
 
-  useEffect(() =>{
-    setContent(NavBarElements)
-  }, [])
+    const getCharacters = async () => {
+      const response = await fetch('https://rickandmortyapi.com/api/character')
+      console.table(response);
+      const data = await response.json();
+      const allCharacters = data.results;
+      console.log(allCharacters);
+      setCharacters(allCharacters)
+    }
 
-  return(
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React Hello
-            </a>
-              {content.map((item) => {
-                return(
-                  <div>
-                    <h1>
-                      {item[0]}
-                    </h1>
-                    
-                      {item[1].map((item) => <h4>{item}</h4>)}
-                    
-                  </div>
+    // const getCards = async() => {
+    //   const response = await fetch('https://rickandmortyapi.com/api')
+    //   console.log(response)
+    // getUsers();
 
-                )
-              })}
-          </header>
+    getCharacters();
 
 
-        </div>
+  }, []);
 
-  )
+	// const usersUI = users.map(({ id, firstName, lastName }) => (
+	// 	<UserName key={id} firstName={firstName} lastName={lastName} />
+	// ));
 
-  
+
+  const cards = characters.map((item) => {
+    return(
+      <CharacterCard key={`char${item.id}`} Name = {item.name} Status = {item.status} Species = {item.species} Image = {item.image} />
+    )
+  })
+
+	return (
+		<div className="App">
+			<header className="App-header">
+				<img src={logo} className="App-logo" alt="logo" />
+				{/* <NavBar />
+				{usersUI} */}
+        {cards}
+			</header>
+		</div>
+	);
 }
-
-
-
 
 export default App;
