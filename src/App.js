@@ -31,11 +31,11 @@ function App() {
       setCharacters(allCharacters)
     }
 
-	const getPagination = async () => {
-		const response = await fetch(variableURL)
-		console.log(response)
+	// const getPagination = async () => {
+	// 	const response = await fetch(variableURL)
+	// 	console.log(response)
 
-	}
+	// }
 
     // const getCards = async() => {
     //   const response = await fetch('https://rickandmortyapi.com/api')
