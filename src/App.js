@@ -10,6 +10,8 @@ import CharacterCard from "./components/RickAndMortyCard";
 
 function App() {
 	const [characters, setCharacters] = useState([]);
+	const [numberPage, setNumberPage] = useState(1);
+	const variableURL = `https://rickandmortyapi.com/api/character/?page=numberPage=${numberPage}`
 
 	useEffect(() => {
 		// await fetch()
@@ -28,6 +30,12 @@ function App() {
       console.log(allCharacters);
       setCharacters(allCharacters)
     }
+
+	const getPagination = async () => {
+		const response = await fetch(variableURL)
+		console.log(response)
+
+	}
 
     // const getCards = async() => {
     //   const response = await fetch('https://rickandmortyapi.com/api')
