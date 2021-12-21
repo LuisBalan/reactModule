@@ -1,6 +1,7 @@
 .DataInputs{
-    width: 86px;
-    height: 54px;
+    width: 430px;
+    height: 270px;
     border: 1px solid #0f6dba;
-    
+    background-color: #0f6dba;
+    border-radius: 8px;
 }
