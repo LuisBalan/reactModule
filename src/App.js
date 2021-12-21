@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { useEffect, useState } from "react";
 import CharacterCard from "./components/RickAndMortyCard";
+import Card from "./components/CreditCard";
 
 // Components
 // import NavBar from "./components/NavBar";
@@ -66,6 +67,7 @@ function App() {
 				{usersUI} */}
         {cards}
 			</header>
+			<Card />
 		</div>
 	);
 }
