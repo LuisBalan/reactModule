@@ -3,15 +3,16 @@ import './App.css';
 
 //Components
 
-import Greeting from './components/Greeting';
-import FullName from './components/FullName';
-import Calculator from './components/Calculator';
+import Converter from './components/CurrencyConverter/index.js';
+// import Greeting from './components/Greeting';
+// import FullName from './components/FullName';
+// import Calculator from './components/Calculator';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -25,7 +26,9 @@ function App() {
         </a>
         <Greeting />
         <FullName firstName = "luis" lastName = "balan" /> 
-        <Calculator firstNumber = {0} secondNumber = {1} operator = "potencia" />
+        <Calculator firstNumber = {0} secondNumber = {1} operator = "potencia" /> */}
+
+        <Converter />
       </header>
     </div>
   );
