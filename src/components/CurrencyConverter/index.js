@@ -8,6 +8,10 @@ function Converter(){
     const [inputExchange, setInputExchange] = useState('');
     const [outputExchange, setOutputExchange] = useState('');
 
+    const enterInputMoney = (event) => {
+        setInputCurrency()
+    }
+
     return(
         <div className="converter">
             <h2>Currency Exchange</h2>
