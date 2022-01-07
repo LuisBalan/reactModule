@@ -32,16 +32,24 @@ const option = factors.map((item) => {
     );
 });
 
+    const [inputMoney, setInputMoney] = useState(0);
+    const [outputMoney, setOutputMoney] = useState(0);
+    const [inputCurrency, setInputExchange] = useState('');
+    const [outputCurrency, setOutputExchange] = useState('');
+
+    // const enterInputMoney = (event) => {
+    //     setInputCurrency()
+    // }
 
 
-    const [inputCurrency, setInputCurrency] = useState(0);
-    const [outputCurrency, setOutputCurrency] = useState(0);
-    const [inputExchange, setInputExchange] = useState('');
-    const [outputExchange, setOutputExchange] = useState('');
+    // useEffect(() => {}, )
 
-    const enterInputMoney = (event) => {
-        setInputCurrency()
-    }
+    // const convertedMoney = () => {
+    //     if()
+    // }
+
+
+
 
     return(
         <div className="converter">
@@ -50,9 +58,12 @@ const option = factors.map((item) => {
 
                     <form className = 'currencyToConvert'>
                         <label for = 'inputMoney'></label>
-                        <input name = 'inputMoney' id = 'inputMoney'type = 'number'></input>
+                        <input name = 'inputMoney' id = 'inputMoney'type = 'number'
+                        onChange={e => setInputMoney(e.target.value)}></input>
+                        {console.log(inputMoney)}
                         <label for = 'inputCurrency'></label>
-                        <select multiple = {false} label = 'inputCurrency'>
+                        <select multiple = {false}
+                                id = 'inputCurrency'>
                             {option}
                         </select>
                     </form>
@@ -60,17 +71,18 @@ const option = factors.map((item) => {
 
                 <form className="convertionResult">
                         <label for = 'ouputMoney'></label>
-                        <input name = 'outputMoney' id = 'outputMoney' type = 'number'></input>
+                        <input name = 'outputMoney' id = 'outputMoney' type = 'number'
+                        onChange={e => setInputMoney(e.target.value)}></input>
                         <label for = 'outputCurrency'></label>
-                        <select name = 'outputCurrency' multiple = {false} id = 'outputCurrency'
-                        onChange={event => setOutputCurrency({outputCurrency: event.target.value})}>
+                        <select name = 'outputCurrency' multiple = {false} id = 'outputCurrency'>
+                        {/* onChange={event => setOutputCurrency({outputCurrency: event.target.value})} */}
                             {option}
                         </select>
-                    </form>
+                </form>
 
             </div>
-    </div>
-    )
+        </div>
+    );
     
 };
 
