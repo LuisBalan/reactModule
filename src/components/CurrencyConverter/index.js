@@ -55,9 +55,11 @@ useEffect(()=> {
                         {console.log(inputMoney)}
                         <label htmlFor = 'inputCurrency'></label>
                         <select multiple = {false}
-                                id = 'inputCurrency'>
+                                id = 'inputCurrency'
+                                onChange={event => setInputExchange({inputCurrency: event.target.value})}>
                             {option}
                         </select>
+                        {console.log(inputCurrency)}
                     </form>
 
 
@@ -68,11 +70,11 @@ useEffect(()=> {
                         onChange={e => setOutputMoney(e.target.value)}></input>
                         {console.log(outputMoney)}
                         <label for = 'outputCurrency'></label>
-                        <select name = 'outputCurrency' multiple = {false} id = 'outputCurrency'>
-                        {/* onChange={event => setOutputCurrency({outputCurrency: event.target.value})} */}
+                        <select name = 'outputCurrency' multiple = {false} id = 'outputCurrency'
+                        onChange={event => setOutputExchange({outputCurrency: event.target.value})}>
                             {option}
                         </select>
-                        
+                        {console.log(outputCurrency)}
                 </form>
 
             </div>
